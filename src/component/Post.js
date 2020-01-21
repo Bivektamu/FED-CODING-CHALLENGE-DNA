@@ -22,8 +22,6 @@ const Post = ({ post }) => {
     autoplay: false
   };
 
-  console.log(images);
-
   const slides = images.map(({ image }) => {
     const id = uuid.v4();
 

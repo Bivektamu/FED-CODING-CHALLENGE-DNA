@@ -78,6 +78,7 @@
   padding-top: 10rem;
   padding-bottom: 10rem;
   position: relative;
+  overflow: hidden;
 }
 
 #post:after {
@@ -172,4 +173,27 @@ button.white-bg {
   color: var(--black-color);
   box-shadow: none;
   border: 1px solid var(--grey-color);
+}
+
+#tabs {
+  padding-top: 11.5rem;
+  padding-bottom: 16.5rem;
+}
+
+.tab-filter {
+  margin-bottom: 3rem;
+}
+.tab-filter input {
+  border: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: none;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+  font-family: var(--open-sans-font);
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+}
+
+.tab-filter input.active {
+  border-bottom: 1px solid var(--grey-color);
 }
