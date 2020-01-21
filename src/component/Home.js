@@ -1,32 +1,47 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Hero from './Hero';
-import { getHeroProduct } from '../actions';
 
-const Home = ({ hero: { loading, hero }, getHeroProduct }) => {
+import Hero from './Hero';
+import Products from './Products';
+
+import { getHeroProduct } from '../actions';
+import { getProducts } from '../actions';
+
+const Home = ({
+  hero: { hero },
+  products: { products },
+  getHeroProduct,
+  getProducts
+}) => {
   useEffect(() => {
     getHeroProduct();
-  }, [getHeroProduct]);
+    getProducts();
+  }, [getHeroProduct, getProducts]);
 
-  if (loading) return '';
+  if (!products || !hero) return '';
 
   console.log(hero);
+  console.log(products);
 
   return (
     <main id='main'>
       <Hero hero={hero} />
+      <Products allProducts={products} />
     </main>
   );
 };
 
 Home.propTypes = {
   getHeroProduct: PropTypes.func.isRequired,
-  hero: PropTypes.object.isRequired
+  getProducts: PropTypes.func.isRequired,
+  hero: PropTypes.object.isRequired,
+  products: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  hero: state.hero
+  hero: state.hero,
+  products: state.products
 });
 
-export default connect(mapStateToProps, { getHeroProduct })(Home);
+export default connect(mapStateToProps, { getHeroProduct, getProducts })(Home);

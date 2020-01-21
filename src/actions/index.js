@@ -26,3 +26,19 @@ export const getHeroProduct = () => dispatch => {
     });
   }
 };
+
+//fetch Hero content
+export const getProducts = () => dispatch => {
+  try {
+    const products = data.filter(({ _section }) => _section === 'products');
+
+    dispatch({
+      type: GET_PRODUCTS,
+      payload: products
+    });
+  } catch (err) {
+    dispatch({
+      type: PRODUCTS_ERROR
+    });
+  }
+};

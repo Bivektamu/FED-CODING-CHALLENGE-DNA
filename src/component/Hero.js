@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 
 const Hero = ({ hero }) => {
   const { title, subtitle, sale, price, label, button, image } = hero[0];
-  console.log(title);
   return (
     <section id='hero'>
-      <span className='sub-heading'>{label}</span>
+      <label>{label}</label>
       <div className='grid-2 min-height-full'>
         <div className='flex flex-column'>
           <h1 className='title'>{title}</h1>
