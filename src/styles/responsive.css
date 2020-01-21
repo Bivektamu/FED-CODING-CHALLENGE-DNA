@@ -159,6 +159,7 @@
 
   #tab-filter {
     border: 1px solid rgba(151, 151, 151, 0.2);
+    border-bottom: none;
     height: 0;
     opacity: 0;
     visibility: hidden;
@@ -173,5 +174,10 @@
   #tab-filter input {
     text-align: left;
     padding: 1rem 2rem;
+  }
+
+  #tab-filter input.active {
+    background: rgba(151, 151, 151, 0.2);
+    border-bottom: 1px solid rgba(151, 151, 151, 0.2);
   }
 }
