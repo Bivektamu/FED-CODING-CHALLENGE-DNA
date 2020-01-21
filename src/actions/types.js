@@ -7,5 +7,5 @@ export const PRODUCTS_ERROR = 'PRODUCTS_ERROR';
 export const GET_POST = 'GET_POST';
 export const POST_ERROR = 'POST_ERROR';
 
-export const GET_TAB = 'GET_TAB';
-export const TAB_ERROR = 'TAB_ERROR';
+export const GET_TABS = 'GET_TABS';
+export const TABS_ERROR = 'TABS_ERROR';

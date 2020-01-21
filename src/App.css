@@ -10,7 +10,8 @@
   padding-bottom: 50px;
 }
 
-#hero:after {
+#hero:after,
+#post:after {
   content: '';
   position: absolute;
   top: 0;
@@ -71,4 +72,104 @@
   color: var(--white-color);
   letter-spacing: 1px;
   padding: 0.5rem 1.5rem;
+}
+
+#post {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  position: relative;
+}
+
+#post:after {
+  left: auto;
+  right: 50%;
+}
+
+#post > .grid-2 {
+  position: relative;
+  z-index: 2;
+}
+
+#post .slick-slider {
+  max-width: 50rem;
+  margin-right: 0;
+  margin-left: auto;
+  position: relative;
+  right: -10rem;
+}
+
+#post .slick-prev {
+  left: 2rem;
+  z-index: 1;
+}
+
+#post .slick-next {
+  right: 2rem;
+  z-index: 1;
+}
+
+#post .slick-prev:before,
+#post .slick-next:before {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  border-top: 2px solid var(--white-color);
+  border-right: 2px solid var(--white-color);
+  transform: rotate(45deg);
+}
+
+#post .slick-prev:before {
+  transform: rotate(-135deg);
+}
+
+#post .slick-dots {
+  width: auto;
+}
+
+#post .slick-dots li {
+  margin: 0;
+}
+#post .slick-dots li button {
+  padding: 0;
+  box-shadow: none;
+}
+
+#post .slick-dots li button:before {
+  font-size: 1rem;
+  color: var(--brown-color);
+  opacity: 0.5;
+}
+
+#post .slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+.blog-wrapper {
+  position: relative;
+  left: 10rem;
+}
+
+#post .flex {
+  height: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: center;
+}
+
+#post .heading {
+  max-width: 35rem;
+  text-align: center;
+  margin: 1rem 0 3rem;
+}
+
+#post .sub-heading {
+  margin-bottom: 2rem;
+}
+
+button.white-bg {
+  background: var(--white-color);
+  color: var(--black-color);
+  box-shadow: none;
+  border: 1px solid var(--grey-color);
 }

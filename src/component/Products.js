@@ -4,7 +4,6 @@ import uuid from 'uuid';
 
 const Products = ({ allProducts }) => {
   const { products } = allProducts[0];
-  console.log(products);
   const product = products.map(({ image, title, subtitle, price, sale }) => {
     const id = uuid.v4();
     return (
