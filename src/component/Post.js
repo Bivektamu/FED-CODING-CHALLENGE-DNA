@@ -19,7 +19,7 @@ const Post = ({ post }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    autoplay: false
+    autoplay: true
   };
 
   const slides = images.map(({ image }) => {
@@ -27,7 +27,7 @@ const Post = ({ post }) => {
 
     return (
       <div key={id}>
-        <img src={image} />
+        <img src={image} alt='slide' />
       </div>
     );
   });

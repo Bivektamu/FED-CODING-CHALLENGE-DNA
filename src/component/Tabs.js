@@ -1,6 +1,5 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import uuid from 'uuid';
 
 const Tabs = ({ allTabs }) => {
   const { tabs } = allTabs[0];
@@ -10,8 +9,19 @@ const Tabs = ({ allTabs }) => {
     disclaimer: tabs[0].disclaimer
   });
 
+  const [activeTab, setActiveTab] = useState('Description');
+
   const changeTab = e => {
     e.preventDefault();
+
+    const tabContainerHeight = 116;
+    const tabContainer = document.getElementById('tab-filter');
+
+    if (tabContainer.classList.contains('show')) {
+      tabContainer.classList.remove('show');
+      tabContainer.style.height = '0';
+    }
+
     const activeTab = document.getElementsByClassName('active');
     activeTab[0].classList.remove('active');
     e.target.classList.add('active');
@@ -26,9 +36,20 @@ const Tabs = ({ allTabs }) => {
     });
   };
 
+  const onClick = () => {
+    const tabContainerHeight = 116;
+    const tabContainer = document.getElementById('tab-filter');
+
+    tabContainer.classList.add('show');
+    tabContainer.style.height = '' + tabContainerHeight + 'px';
+  };
+
   return (
     <section id='tabs'>
-      <form className='tab-filter grid-3'>
+      <p className='filter-bar' onClick={() => onClick()}>
+        {activeTab}
+      </p>
+      <form id='tab-filter' className=' grid-3'>
         <input
           type='button'
           className='filter-options active'
@@ -50,7 +71,7 @@ const Tabs = ({ allTabs }) => {
           value='Reviews'
         />
       </form>
-      {info && info != '' && (
+      {info && info !== '' && (
         <article className='wrapper'>
           <p>{info.statement}</p>
           <p className='disclaimer'>{info.disclaimer}</p>
@@ -60,6 +81,8 @@ const Tabs = ({ allTabs }) => {
   );
 };
 
-Tabs.propTypes = {};
+Tabs.propTypes = {
+  allTabs: PropTypes.array.isRequired
+};
 
 export default Tabs;

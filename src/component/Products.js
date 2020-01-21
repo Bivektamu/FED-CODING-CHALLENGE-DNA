@@ -6,6 +6,7 @@ const Products = ({ allProducts }) => {
   const { products } = allProducts[0];
   const product = products.map(({ image, title, subtitle, price, sale }) => {
     const id = uuid.v4();
+
     return (
       <div key={id} className='product'>
         {sale && <span className='sale-tag'>sale</span>}

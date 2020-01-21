@@ -1,0 +1,177 @@
+@media screen and (max-width: 1300px) {
+  .hero-img {
+    left: -10rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .hero-img {
+    left: -7rem;
+  }
+
+  #post .slick-slider {
+    right: -5rem;
+  }
+
+  .blog-wrapper {
+    left: 5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #hero {
+    padding-top: 5rem;
+  }
+
+  .grid-2 {
+    flex-direction: column;
+  }
+
+  .grid-2 > * {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .grid-2 > *:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .hero-img {
+    left: auto;
+  }
+
+  #post .slick-slider {
+    right: auto;
+    margin: auto;
+  }
+
+  .blog-wrapper {
+    left: auto;
+  }
+
+  .blog-wrapper label {
+    position: static;
+    margin: auto;
+    display: block;
+    padding-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .blog-wrapper label:after {
+    top: 3rem;
+  }
+
+  #tabs {
+    padding-top: 6.5rem;
+    padding-bottom: 11.5rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #logo .heading {
+    font-size: 2.5rem;
+  }
+
+  #logo:after {
+    display: none;
+  }
+
+  section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #hero:after,
+  #post:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .hero-img {
+    width: 25rem;
+  }
+
+  .title {
+    font-size: 6.2rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  #hero label {
+    top: 4rem;
+  }
+
+  #hero .grid-2,
+  #post {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .my-4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .grid-3 {
+    flex-direction: column;
+  }
+
+  .grid-3 > * {
+    width: 100%;
+  }
+
+  #tabs {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .filter-bar {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 1px solid var(--grey-color);
+    border-radius: 0.5rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .filter-bar:after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    right: 2rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    border-top: 1px solid var(--black-color);
+    border-right: 1px solid var(--black-color);
+    transform: rotate(135deg);
+  }
+
+  #tab-filter {
+    border: 1px solid rgba(151, 151, 151, 0.2);
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease;
+  }
+
+  #tab-filter.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #tab-filter input {
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+}

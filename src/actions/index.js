@@ -11,7 +11,7 @@ import {
 
 import data from '../data';
 
-//fetch Hero content
+//fetch Hero Product
 export const getHeroProduct = () => dispatch => {
   try {
     const heroProduct = data.filter(({ _section }) => _section === 'hero');

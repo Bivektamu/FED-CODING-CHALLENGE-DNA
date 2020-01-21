@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import Hero from './Hero';
 import Products from './Products';
@@ -31,13 +32,11 @@ const Home = ({
 
   if (!products || !hero || !post || !tabs) return '';
 
-  console.log(hero);
-  console.log(products);
-  console.log(post);
-  console.log(tabs);
-
   return (
     <main id='main'>
+      <Link to='/' id='logo'>
+        <h2 className='heading'>LOGO</h2>
+      </Link>
       <Hero hero={hero} />
       <Products allProducts={products} />
       <Post post={post} />

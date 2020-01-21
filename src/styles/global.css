@@ -8,13 +8,17 @@ body {
   color: var(--black-color);
 }
 
+#main {
+  overflow: hidden;
+}
+
 section {
   display: block;
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .title,
@@ -41,7 +45,7 @@ label {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  top: 10%;
+  top: 6rem;
   position: absolute;
   z-index: 2;
   left: 0;
@@ -79,9 +83,16 @@ button {
   -moz-box-shadow: 2px 7px 22px -6px rgba(44, 46, 47, 1);
   box-shadow: 2px 7px 22px -6px rgba(44, 46, 47, 1);
   color: var(--white-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-button > span {
+button:hover {
+  background: var(--white-color);
+  color: var(--black-color);
+}
+
+button>span {
   width: 0.8rem;
   height: 0.8rem;
   transform: rotate(45deg);
@@ -89,7 +100,13 @@ button > span {
   border-right: 2px solid var(--white-color);
   display: inline-block;
   margin-left: 1rem;
+  transition: all 0.3s ease;
 }
+
+button:hover>span {
+  border-color: var(--black-color);
+}
+
 
 .disclaimer {
   font-size: 1rem;
@@ -112,16 +129,12 @@ button > span {
   justify-content: center;
 }
 
-.grid-2 > * {
+.grid-2>* {
   width: 50%;
 }
 
-.grid-3 > * {
+.grid-3>* {
   width: calc(100% / 3);
-}
-
-.min-height-full {
-  min-height: 100vh;
 }
 
 .my-4 {
