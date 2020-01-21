@@ -1,8 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# DNA-FED-CODING-CHALLENGE
+
+This project is a coding challenge for interviewing process organized by News Corp Australia Initiative.
+This project is created using React Js library along with Redux for managing application state. Other web tools includes HTML5, CSS 3, JavaScript, ES6 and git. Thank you for your time in reviewing these code and organizing the test 🙂.
+
+## Installation
+
+Please fork and clone the repository.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Installs all dependencies required for project.
 
 ### `npm start`
 
@@ -37,32 +48,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## App Info
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bivek Jang Gurung
 
-### Code Splitting
+### Version
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+1.0.0
 
-### Analyzing the Bundle Size
+### License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is licensed under the MIT License
