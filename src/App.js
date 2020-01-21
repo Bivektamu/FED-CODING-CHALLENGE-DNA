@@ -1,12 +1,20 @@
 import React from 'react';
+import store from './store';
+import { Provider } from 'react-redux';
 
-import 'normalize.css';
-import './assets/styles/variables.css';
-import './assets/styles/global.css';
+import './styles/normalize.css';
+import './styles/variables.css';
+import './styles/global.css';
 import './App.css';
 
+import Home from './component/Home';
+
 function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <Provider store={store}>
+      <Home />
+    </Provider>
+  );
 }
 
 export default App;

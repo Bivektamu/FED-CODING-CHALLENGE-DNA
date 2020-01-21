@@ -1,0 +1,125 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--open-sans-font);
+    color: var(--black-color);
+}
+
+section {
+    display: block;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+
+.title,
+.heading {
+    font-size: 7.2rem;
+    font-family: var(--roboto-font);
+    letter-spacing: 0.9rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.heading {
+    font-size: 3.6rem;
+    letter-spacing: 0.5rem;
+}
+
+.sub-heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    top: 10%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.sub-heading:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--black-color);
+    top: -20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.price {
+    font-family: var(--roboto-font);
+    letter-spacing: 0.1rem;
+}
+
+button {
+    font-family: var(--roboto-font);
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background: var(--black-color);
+    padding: 1.5rem 2rem;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: 2px 7px 22px -6px rgba(44, 46, 47, 1);
+    -moz-box-shadow: 2px 7px 22px -6px rgba(44, 46, 47, 1);
+    box-shadow: 2px 7px 22px -6px rgba(44, 46, 47, 1);
+    color: var(--white-color);
+}
+
+button>span {
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: rotate(45deg);
+    border-top: 2px solid var(--white-color);
+    border-right: 2px solid var(--white-color);
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+label {
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+}
+
+.disclaimer {
+    font-size: 1rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.grid-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-2>* {
+    width: 50%;
+}
+
+.min-height-full {
+    min-height: 100vh;
+}
+
+.my-4 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
